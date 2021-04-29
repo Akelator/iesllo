@@ -1,0 +1,42 @@
+$size: 300px;
+
+$shape-red: '<svg xmlns="http://www.w3.org/2000/svg" width="#{$size}" height="#{$size}" viewBox="0 0 32 32"><path fill="rgb(234, 68, 53)" d="M16,0.018C10.778,0.016,5.886,2.568,2.9,6.852l7.239,12.538L16,16.007V9.244h14.473 C27.85,3.618,22.207,0.021,16,0.018z"/></svg>';
+$shape-green: '<svg xmlns="http://www.w3.org/2000/svg" width="#{$size}" height="#{$size}" viewBox="0 0 32 32"><path fill="rgb(0, 172, 71) " d="M2.153,24.001c2.61,4.522,7.266,7.483,12.469,7.927l7.24-12.538L16,16.007l-5.857,3.382L8.19,16.006 L6.76,13.53L2.906,6.854C-0.654,11.938-0.948,18.624,2.153,24.001z"/></svg>';
+$shape-yellow: '<svg xmlns="http://www.w3.org/2000/svg"	width="#{$size}" height="#{$size}" viewBox="0 0 32 32"><path fill="rgb(255, 187, 0)" d="M29.846,24.001c2.611-4.52,2.847-10.033,0.63-14.761H15.998v6.767l5.858,3.383l-1.954,3.383l-1.429,2.477 l-3.855,6.674C20.803,32.465,26.738,29.376,29.846,24.001z"/></svg>';
+$shape-white: '<svg xmlns="http://www.w3.org/2000/svg" width="#{$size}" height="#{$size}" viewBox="0 0 32 32"><circle fill="rgb(255, 255, 255) " cx="15.999" cy="16.01" r="6.766"/></svg>';
+$shape-blue: '<svg xmlns="http://www.w3.org/2000/svg" width="#{$size}" height="#{$size}" viewBox="0 0 32 32"><circle fill="rgb(66, 133, 244)" cx="15.999" cy="16.009" r="5.228"/></svg>';
+
+:host {
+  display: flex;
+  width: $size;
+  height: $size;
+  position: absolute;
+  left: calc(50% - #{$size} / 2);
+  top: calc(50% - #{$size} / 2);
+}
+
+.logo-shape {
+  transform-origin: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $size;
+  height: $size;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &.yellow {
+    background-image: url("data:image/svg+xml;charset=UTF-8,#{$shape-yellow}");
+  }
+  &.green {
+    background-image: url("data:image/svg+xml;charset=UTF-8,#{$shape-green}");
+  }
+  &.red {
+    background-image: url("data:image/svg+xml;charset=UTF-8,#{$shape-red}");
+  }
+  &.white {
+    background-image: url("data:image/svg+xml;charset=UTF-8,#{$shape-white}");
+  }
+  &.blue {
+    background-image: url("data:image/svg+xml;charset=UTF-8,#{$shape-blue}");
+  }
+}
